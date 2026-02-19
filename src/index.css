@@ -1,0 +1,33 @@
+/* Importación de la nueva fuente Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Aplicar Oswald a todo el sitio por defecto */
+    body {
+      /* Cambiamos font-lato por font-oswald */
+      @apply font-oswald text-gray-800;
+      font-size: 16px;
+      letter-spacing: 0.01em;
+    }
+  
+    h1, h2 {
+      /* Cambiamos font-merriweather por font-oswald */
+      /* Oswald suele verse mejor con un peso Medium (500) o Bold (700) en títulos */
+      @apply font-oswald font-medium; 
+      letter-spacing: 1px;
+      text-transform: uppercase; /* Opcional: Oswald luce muy bien en mayúsculas */
+    }
+  
+    h3, h4 {
+      /* Cambiamos font-lato por font-oswald */
+      @apply font-oswald font-semibold;
+    }
+}
+
+.linear-swiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
